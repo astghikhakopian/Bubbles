@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-df-0Gr">
+                                <rect key="frame" x="0.0" y="84" width="414" height="758"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your interests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bu-iE-0zO">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCC-zA-4Os" customClass="BubblesView" customModule="Demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="29" width="414" height="659"/>
+                                        <color key="backgroundColor" red="0.051716849209999999" green="0.069838829340000005" blue="0.073709316550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOU-2u-Pgo">
+                                        <rect key="frame" x="83" y="688" width="248" height="70"/>
+                                        <color key="backgroundColor" red="0.32105463740000001" green="0.59340614079999998" blue="0.92831283809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="dxN-JB-xsZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Confirm"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QOU-2u-Pgo" firstAttribute="width" secondItem="ahc-df-0Gr" secondAttribute="width" multiplier="0.6" id="CFn-lb-9g8"/>
+                                    <constraint firstItem="KCC-zA-4Os" firstAttribute="width" secondItem="ahc-df-0Gr" secondAttribute="width" id="VPt-t0-9dV"/>
+                                    <constraint firstItem="0Bu-iE-0zO" firstAttribute="width" secondItem="ahc-df-0Gr" secondAttribute="width" id="nHX-zl-mrS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.051716849209999999" green="0.069838829340000005" blue="0.073709316550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ahc-df-0Gr" secondAttribute="bottom" constant="20" id="D4P-Oz-2q9"/>
+                            <constraint firstItem="ahc-df-0Gr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GGC-BM-awm"/>
+                            <constraint firstItem="ahc-df-0Gr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="esY-7Y-St3"/>
+                            <constraint firstAttribute="trailing" secondItem="ahc-df-0Gr" secondAttribute="trailing" id="r6a-xW-XgG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bubblesView" destination="KCC-zA-4Os" id="28E-jN-ucg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="88"/>
+        </scene>
+    </scenes>
+</document>
